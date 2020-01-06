@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Blah</title>
+</head>
+<body>
+<form>
+<input type="text" name="desc" id="ds">
+<button type="button" onclick="loadItem()">Click Here</button>
+</form>
+<div id="demo"></div>
+<script>
+class Car {
+	  constructor(brand) {
+	    this.carname = brand;
+	  }
+	  present() {
+	    return "Hello , You can buy a " + this.carname;
+	  }
+	}
+function loadItem(){
+	var product=document.getElementById("ds").value;
+	switch(product){
+	case "Ford":
+		mycar = new Car("Ford");
+		document.getElementById("demo").innerHTML = mycar.present();
+		break;
+	case "Benz":
+		mycar = new Car("Benz");
+		document.getElementById("demo").innerHTML = mycar.present();
+		break;
+	default:
+		document.getElementById("demo").innerHTML = "Try another car!";
+		break;
+	}
+}
+</script>
+</body>
+</html>
